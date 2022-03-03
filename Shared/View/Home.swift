@@ -54,7 +54,7 @@ struct Home: View {
             
             // Postss...
             SnapCarousel(spacing: getRect().height < 750 ? 15 : 20,
-                         trailingSpace: getRect().height < 750 ? 100
+                    trailingSpace: getRect().height < 750 ? 100
                          : 150, index: $currentIndex, items: posts) {post in
                 
                 CardView(post: post)
@@ -118,6 +118,7 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .previewDevice("iPhone 13")
     }
 }
 
